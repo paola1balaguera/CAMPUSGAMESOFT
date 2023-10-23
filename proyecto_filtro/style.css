@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: #efefff;
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    max-height: 50px;
+    border-bottom: 2px;
+    box-shadow: 7px 5px 34px -15px rgba(0,0,0,0.69);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF;
+}
+
+header div {
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header div h1 {
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+header div nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header div nav ul li {
+    text-decoration: none;
+    margin-left: 20px;
+    cursor: pointer;
+    padding: 4px;
+    color: #000;
+}
+
+header div nav ul li a {
+    color: #000;
+    text-decoration: none;
+}
+
+header div nav ul li:hover {
+    background-color: #000;
+    color: #FFF;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+header div nav ul li:hover a {
+    color: #FFF;
+}
+
+header div nav ul li.active a {
+    color: #FFF;
+}
+
+header div nav ul li.active {
+    background-color: #000;
+    color: #FFF;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+section {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #FFF;
+    border-radius: 4px;
+    box-shadow: 7px 5px 34px -10px rgba(0,0,0,0.69);
+
+}
+
+section .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+section .title button {
+    background-color: #000;
+    color: #FFF;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 1px solid #000;
+}
+
+section .title button:hover {
+    background-color: #FFF;
+    color: #000;
+    border: 1px solid #000;
+}
+
+section .filter {
+    display: none;
+    flex-direction: column;
+    border: 1px solid #dfdfdf;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 10px 0 10px 0;
+}
+
+section .filter input {
+    display: none;
+}
+
+section .filter input,
+section .filter select {
+    margin: 0 0 5px 0;
+    border-radius: 4px;
+    border: 1px solid #b4b4b4;
+    padding: 4px;
+}
+
+section table {
+    width: 100%;
+    text-align: center;
+}
+
+section table tr .actions svg {
+    width: 20px;
+}
+
+section table tr .actions {
+    display: flex;
+    justify-content: center;
+}
+
+section table tr .actions .btn-actions {
+    border-radius: 50%;
+    padding: 6px;
+    margin: 0;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+section table tr .actions .btn-actions:hover {
+    background-color: #000;
+    color: #FFF;
+}
+
+.my-modal {
+    position: absolute;
+    z-index: 1;
+    background: rgba(0, 0, 0, .3);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.my-modal .modal-content {
+    background: #FFFFFF;
+    width: 600px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 2px;
+    box-shadow: 10px 6px 25px -15px rgba(0,0,0,0.75);
+}
+
+.my-modal .modal-content .modal-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.my-modal .modal-content .modal-header .modal-header-container {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.my-modal .modal-content .modal-header .modal-header-container span {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.my-modal .modal-content .modal-header button {
+    border: 0;
+    background: 0;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.my-modal .modal-content .modal-body {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.my-modal .modal-content .modal-body .modal-body-container {
+    padding: 0 20px 20px 20px;
+    width: 100%;
+}
+
+
+.my-modal .modal-content .modal-footer {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.my-modal .modal-content .modal-footer .modal-footer-container {
+    padding: 0 20px 20px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+}
+
+.my-modal .modal-content .modal-footer .modal-footer-container .btn-cancel {
+    border: .5px solid black;
+    background-color: rgb(230, 73, 73);
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.my-modal .modal-content .modal-footer .modal-footer-container .btn-success {
+    border: .5px solid black;
+    background-color: rgb(24, 41, 28);
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.my-modal .modal-body .form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.my-modal .modal-body .form-group label {
+    margin: 0 0 2px 0;
+}
+
+.my-modal .modal-body .form-group input,
+.my-modal .modal-body .form-group select {
+    margin: 0 0 5px 0;
+    border-radius: 4px;
+    border: 1px solid #b4b4b4;
+    padding: 4px;
+}
+
+#toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px; 
+    padding: 16px; 
+    position: fixed; 
+    z-index: 1;
+    left: 50%; 
+    bottom: 30px;
+}
+
+#toast.show {
+    visibility: visible; 
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
